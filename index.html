@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<title></title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/banner.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  var oLi = document.getElementById("tab").getElementsByTagName("li");
+	var oUl = document.getElementById("content").getElementsByTagName("ul");
+		
+		for(var i = 0; i < oLi.length; i++)
+		{
+			oLi[i].index = i;
+			oLi[i].onmouseover = function ()
+			{
+				
+				for(var n = 0; n < oLi.length; n++)
+					oLi[n].className="";
+					
+				this.className = "current";
+				
+				for(var n = 0; n < oUl.length; n++) 
+					oUl[n].style.display = "none";
+					
+				oUl[this.index].style.display = "block";
+				if(oUl[this.index].title == ""){			
+					$.parser.parse(oUl[this.index]);
+					oUl[this.index].title = "parsed";
+				}
+			}	
+		}
+})
+</script>
+</head>
+
+<body>
+<div class="header">
+  <a href="index.html"><img src="images/logo.jpg" /></a>
+</div>
+<div class="clear"></div>
+<div class="nav">
+  <div class="main">
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="about.html">关于公司</a></li>
+      <li><a href="product.html">产品中心</a></li>
+      <li><a href="case.html">精品案例</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="banner">
+  <div class="b-img">
+      <img src="images/banner.jpg" width="100%"/>
+      <img src="images/banner.jpg" width="100%" />
+  </div>
+  <div class="clear"></div>
+  <div class="b-list"> </div>
+</div>
+<div class="clear"></div>
+<div class="part1">
+  <div class="main">
+    <p class="ccsl">欢迎访问本站，欢迎来电咨询：18074786063</p>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="part2">
+  <div class="contitbox">
+    <div class="tit ccsl">公司核心成员与毕业设计说明</div>
+    <div class="line"></div>
+    <div class="sub">专注为客户提供优质产品，贴心服务</div>
+  </div>
+  <ul>
+    <li>
+      <a href="product_xq.html">
+      <img src="images/网络拓补图 .JPG" width="1609" height="549"/>
+      <div class="item">
+        <div class="tit ccsl">毕业设计说明</div>
+        <div class="sub ccsl"></div>
+      </div>
+      </a>
+    </li>
+    <li>
+      <a href="product_xq.html">
+      <img src="images/retouch_2021050314104305.jpg" width="1444" height="1925"/>
+      <div class="item">
+        <div class="tit ccsl">韦慧婷</div>
+        <div class="sub ccsl">CEO</div>
+      </div>
+      </a>
+    </li>
+    <li>
+      <a href="product_xq.html">
+      <img src="images/img-29c20993f12467e3bac5712adb2d1a53.jpg" width="2048" height="2048"/>
+      <div class="item">
+        <div class="tit ccsl">金知乎</div>
+        <div class="sub ccsl">销售总监</div>
+      </div>
+      </a>
+    </li>
+    <li>
+      <a href="product_xq.html">
+      <img src="images/3tplfwd9e6g1cmnpm9jb5f7w3.jpg" width="1539" height="2052"/>
+      <div class="item">
+        <div class="tit ccsl">刘市我</div>
+        <div class="sub ccsl">总经理</div>
+      </div>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="clear"></div>
+<div class="linebox"></div>
+<div class="clear"></div>
+<div class="part3">
+  <div class="contitbox">
+    <div class="tit ccsl">产品分类 <span>· Product classification</span></div>
+    <div class="line"></div>
+    <div class="sub">专注为客户提供优质产品，贴心服务</div>
+  </div>
+  <div class="part3L">
+    <div class="titbox">
+      <p class="ccsl">产品中心</p>
+    </div>
+    <ul style="height:291px">
+      <li><a href="product.html" class="ccsl">电视系列</a></li>
+      <li><a href="product.html" class="ccsl">洗衣机系列</a></li>
+      <li><a href="product.html" class="ccsl">空调系列</a></li>
+      <li><a href="product.html" class="ccsl">冰箱系列</a></li>
+      <li><a href="product.html" class="ccsl">消毒柜系列</a></li>
+      <li><a href="product.html" class="ccsl">热水器系列</a></li>
+    </ul>
+    <div class="lxwm">
+      <div class="tel1">全国服务热线：</div>
+      <div class="tel2">18074786063 </div>
+    </div>
+  </div>
+  <div class="part3R">
+    <ul id="tab">
+       <li class="current"><a>热销推荐</a></li>
+       <li><a>&nbsp;</a></li>
+    </ul>
+    <div id="content">
+      <ul style="display:block">
+        <li>
+          <a href="product_xq.html">
+          <img src="images/u=1754976147,1396180356&amp;fm=26&amp;gp=0.jpg" width="516" height="300"/>
+          <p class="ccsl">电视系列</p>
+          </a>
+        </li>
+        <li>
+          <a href="product_xq.html">
+          <img src="images/src=http___2d.zol-img.com.cn_product_170_239_cenYyaW7SKdEs.png&amp;refer=http___2d.zol-img.com.jfif" width="741" height="620"/>
+          <p class="ccsl">空调系列</p>
+          </a>
+        </li>
+        <li>
+          <a href="product_xq.html">
+          <img src="images/u=165302590,1398155620&amp;fm=26&amp;gp=0.jpg" width="395" height="316"/>
+          <p class="ccsl">冰箱系列</p>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="product_xq.html">
+          <img src="images/1.png" width="280" height="280"/>
+          <p class="ccsl">洗衣机系列</p>
+          </a>
+        </li>
+        <li>
+          <a href="product_xq.html">
+          <img src="images/1.png" width="280" height="280"/>
+          <p class="ccsl">洗衣机系列</p>
+          </a>
+        </li>
+        <li>
+          <a href="product_xq.html">
+          <img src="images/1.png" width="280" height="280"/>
+          <p class="ccsl">洗衣机系列</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="part4">
+  <div class="contitbox">
+    <div class="titbox">
+      <p class="ccsl">&nbsp;</p>
+    </div>
+    <div class="part4two">
+      <a href="detail.html"></a>
+    </div>
+    <ul>
+<li>
+        <span>&nbsp;</span>
+      </li>
+      <li>
+      <a href="detail.html" class="ccsl">&nbsp;</a><span>&nbsp;</span> </li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+  <div class="main">
+    <div class="footL">
+      <img src="images/QQ图片20210515134511.jpg" width="200" />
+    </div>
+    <div class="footR">
+        联系QQ：2153348402<br />
+        手机号码：18074786063<br />
+        联系邮箱：2153348402@qq.com
+        <br />
+      联系地址：广西壮族自治区南宁市大学东路168号
+  </div>
+    <div class="clear"></div>
+    <div class="footbox">
+      <div class="con">©2020 梨绘有限公司 版权所有</div>
+    </div>
+  </div>
+</div>
+<style>
+.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+</style>
+<div class="copyrights" id="links20210126">
+	Collect from <a href="http://www.cssmoban.com/"  title="网站模板">模板之家</a>
+	<a href="http://cooco.net.cn/" title="组卷网">组卷网</a>
+</div>
+</body>
+</html>
